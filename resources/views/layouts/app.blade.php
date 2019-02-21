@@ -41,14 +41,14 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/menu1">Menu1</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/">Features</a>
+                                <a class="nav-link" href="/menu2">Menu2</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/">Pricing</a>
+                                <a class="nav-link" href="/menu3">Menu3</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -82,6 +82,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="zamowienia">Zamowienia</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -91,7 +92,6 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
-                                    <a class="dropdown-item" href="zamowienia">Zamowienia</a>
                                 </div>
                             </li>
                         @endguest
