@@ -11,11 +11,22 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/zamowienia', 'ZamowieniaController@index')->name('zamowienia');
+Route::group(['middleware' => ['guest']], function () {
+    // Guest routs
+    Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/', function () {
+        return view('home');
+    });
+});
+
+Route::group(['middleware' => ['auth']], function () {
+    // Authorized routs
+    Route::get('/zamowienia', 'ZamowieniaController@index')->name('zamowienia');
+});
+
+Route::get('/admin', 'AdminController@admin')
+    ->middleware('is_admin')
+    ->name('admin');
