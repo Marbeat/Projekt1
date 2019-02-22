@@ -14,19 +14,21 @@
 
 Auth::routes();
 
-Route::group(['middleware' => ['guest']], function () {
-    // Guest routs
-    Route::get('/home', 'HomeController@index')->name('home');
-    Route::get('/', function () {
-        return view('home');
-    });
+Route::get('/', function () {
+return view('home');
 });
 
-Route::group(['middleware' => ['auth']], function () {
+Route::get('/home', 'HomeController@index')->name('home');
+
+    Route::group(['middleware' => ['auth']], function () {
     // Authorized routs
-    Route::get('/zamowienia', 'ZamowieniaController@index')->name('zamowienia');
-});
+    Route::get('/orders', 'OrdersController@index')->name('orders');
+    });
 
 Route::get('/admin', 'AdminController@admin')
     ->middleware('is_admin')
     ->name('admin');
+
+Route::get('menu1','SitesController@menu1');
+Route::get('menu2','SitesController@menu2');
+Route::get('menu3','SitesController@menu3');
