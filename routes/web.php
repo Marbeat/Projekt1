@@ -21,7 +21,7 @@ return view('home');
 Route::get('/home', 'HomeController@index')->name('home');
 
     Route::group(['middleware' => ['auth']], function () {
-    // Authorized routs
+    // Authorized routs for users
     Route::get('/orders', 'OrdersController@index')->name('orders');
     });
 

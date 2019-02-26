@@ -514,7 +514,7 @@ pre code {
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
-    margin-left: auto
+    margin-left: auto;
 }
 
 @media (min-width: 576px) {
@@ -4013,7 +4013,7 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
 }
 
 .nav-tabs .nav-item {
-    margin-bottom: -1px
+    margin-bottom: -1px;
 }
 
 .nav-tabs .nav-link {
@@ -4289,7 +4289,7 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
 
     .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: .5rem;
-        padding-left: .5rem
+        padding-left: 1.5rem;
     }
 
     .navbar-expand-lg > .container, .navbar-expand-lg > .container-fluid {
@@ -10154,3 +10154,24 @@ a.text-dark:focus, a.text-dark:hover {
 }
 
 /*# sourceMappingURL=bootstrap.min.css.map */
+footer.page-footer{
+    position: absolute;
+    bottom:0;
+    width:100%;
+    color: #fff;
+
+}
+footer.page-footer a {
+    color: #fff;
+}
+footer.page-footer .footer-copyright {
+    overflow: hidden;
+    background-color: rgba(0,0,0,.2);
+    color: rgba(255,255,255,.6);
+}
+.blue {
+    background-color: #483D8B !important;
+}
+.font-small {
+    font-size: .9rem;
+}

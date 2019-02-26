@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@extends('layouts.footer')
 @section('title')
     Menu1
 @endsection
@@ -9,3 +10,4 @@ site - menu1
     </div>
 </div>
 @endsection
+
