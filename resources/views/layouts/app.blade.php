@@ -43,11 +43,11 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        <a class="nav-link" href="/menu1">First Site</a>
+                        <a class="nav-link" href="/menu2">Second Site</a>
+                        <a class="nav-link" href="/menu3">Third Site</a>
                         <!-- Authentication Links -->
                         @guest
-                            <a class="nav-link" href="/menu1">First Site</a>
-                            <a class="nav-link" href="/menu2">Second Site</a>
-                            <a class="nav-link" href="/menu3">Third Site</a>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
@@ -83,10 +83,9 @@
                 </div>
             </div>
         </nav>
-
-        <main class="py-4">
-            @yield('content')
-        </main>
     </div>
+    <main class="py-4">
+        @yield('content')
+    </main>
 </body>
 </html>

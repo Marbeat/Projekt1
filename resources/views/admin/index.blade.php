@@ -2,8 +2,10 @@
 @extends('layouts.footer')
 @section('content')
 <div class="container">
+    <div class="content">
     <div class="row justify-content-center">
 tutaj panel admina
     </div>
+</div>
 </div>
 @endsection
