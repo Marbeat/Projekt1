@@ -44,6 +44,8 @@ html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
+    position: relative;
+    min-height: 100%;
 
 }
 
@@ -60,6 +62,7 @@ body {
     color: #212529;
     text-align: left;
     background-color: #ffffff;
+    margin-bottom: 50px;
 }
 
 dl, ol, ul {
@@ -440,7 +443,6 @@ pre code {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-
 }
 
 @media (min-width: 576px) {
@@ -498,7 +500,8 @@ pre code {
     position: relative;
     width: 100%;
     padding-right: 15px;
-    padding-left: 15px
+    padding-left: 15px;
+    z-index: 0;
 }
 
 .col {
@@ -4014,6 +4017,7 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
     -ms-flex-pack: justify;
     justify-content: space-between;
     padding: .5rem 1rem;
+    z-index: 1;
 }
 
 .navbar > .container, .navbar > .container-fluid {
@@ -10083,10 +10087,10 @@ a.text-dark:focus, a.text-dark:hover {
 
 /*# sourceMappingURL=bootstrap.min.css.map */
 footer.page-footer{
-    position: fixed;
-    bottom:0;
+    position:absolute;
+    height: auto;
+    bottom: 0;
     width:100%;
-    color: #fff
 }
 footer.page-footer a {
     color: #fff;
@@ -10103,7 +10107,6 @@ footer.page-footer .footer-copyright {
     font-size: .9rem;
 }
 .content {
-    padding-bottom: 50px;
+    padding-bottom: auto;
     padding-top: 50px;
-    asd
 }
