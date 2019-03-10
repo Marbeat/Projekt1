@@ -1,3 +1,4 @@
+@extends('layouts.title', ['title' => 'Menu2'])
 @extends('layouts.app')
 @extends('layouts.footer')
 @section('content')

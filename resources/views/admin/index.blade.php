@@ -1,3 +1,4 @@
+@extends('layouts.title', ['title' => 'Panel administratora'])
 @extends('layouts.app')
 @extends('layouts.footer')
 @section('content')

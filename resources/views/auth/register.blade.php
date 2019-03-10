@@ -1,3 +1,4 @@
+@extends('layouts.title', ['title' => 'Rejestracja'])
 @extends('layouts.app')
 @extends('layouts.footer')
 @section('content')
