@@ -3,11 +3,11 @@
 @extends('layouts.footer')
 <section class="jumbotron text-center">
     <div class="container">
-        <h1 class="jumbotron-heading text-uppercase text-white">Zaprojektuj stronę z <strong>My-design</strong></h1>
+        <h2 class="jumbotron-heading text-uppercase text-white">Zaprojektuj stronę z <strong>My-design</strong></h2>
         <p class="lead text-white">Oferujemy najniższe ceny na rynku, zapewniając satysfakcję jakości</br>Ustal warunki projektu w naszym formularzu, a my ułatwimy Tobie drogę do stworzenia własnego wyglądu w sieci!</p>
         <p>
-            <a href="/orders" class="btn btn-primary my-2">Formularz</a>
-            <a href="/contact" class="btn btn-secondary my-2">Kontakt</a>
+            <a href="/orders" class="btn btn-primary my-2"><span class="glyphicon glyphicon-list-alt"></span> Formularz projektu</a>
+            <a href="/contact" class="btn btn-secondary my-2"><span class="glyphicon glyphicon-envelope"></span> Kontakt</a>
         </p>
     </div>
 </section>
@@ -25,9 +25,9 @@
                 <div class ="text-uppercase mb-4">
                     <h4>Przedstaw nam swoje wymagania</h4>
                 </div>
-                <h8>W prosty sposób możesz ustalić warunki dotyczące swojej strony</br>
+                <p>W prosty sposób możesz ustalić warunki dotyczące swojej strony</br>
                 Nasz formularz pozwoli Ci na sprecyzowanie szczegółów dotyczących zamówienia
-                </h8>
+                </p>
             </div>
             </div>
     </div>
@@ -45,23 +45,24 @@
                 <h4>Oferujemy szeroką możliwość dopasowania projektu do Twoich wymagań!</h4>
                     </div>
                     <div class="row my-n3">
-                    <div class ="col">
-                        <h5>Responsywność</h5>
+                    <div class ="col-sm">
+                        <h5><span class="glyphicon glyphicon-phone"></span> Responsywność</h5>
                         <font color="#6c757d">Tworzymy strony, które w oparciu o najnowsze technologie dostosowują się do każdej rozdzielczości na której są wyświetlane</font>
                     </div>
-                    <div class ="col">
-                        <h5>Wygląd</h5>
-                        <font color="#6c757d">Projektujemy strony o unikalnym wyglądzie dopasowanym do Twoich oczekiwań </font>
+                        <div class ="col-sm">
+                            <h5><span class="glyphicon glyphicon-cog"></span> Funkcjonalność</h5>
+                            <font color="#6c757d">Jansno określona nawigacja, dzięki czemu poruszanie się po stronie nie będzie stanowiło żadnego problemu</font>
+                        </div>
+
                     </div>
-                    </div>
-                        <div class="row">
-                    <div class ="col">
-                        <h5>Administracja</h5>
+                    <div class="row">
+                    <div class ="col-sm">
+                        <h5><span class="glyphicon glyphicon-user"></span> Administracja</h5>
                         <font color="#6c757d">Zarządzanie, oraz pomoc w sprawach technicznych po ukończonym projekcie </font>
                     </div>
-                        <div class ="col">
-                            <h5>Funkcjonalność</h5>
-                            <font color="#6c757d">Jansno określona nawigacja, dzięki czemu poruszanie się po stronie nie będzie stanowiło żadnego problemu</font>
+                        <div class ="col-sm">
+                            <h5><span class="glyphicon glyphicon-eye-open"></span> Wygląd</h5>
+                            <font color="#6c757d">Projektujemy strony o unikalnym wyglądzie dopasowanym do Twoich oczekiwań </font>
                         </div>
                         </div>
             </div>
