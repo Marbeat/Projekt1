@@ -4412,8 +4412,7 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
 }
 
 .navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
-    color: #fff;
-    font-weight: 500
+    color: #e49837
 }
 
 .navbar-dark .navbar-nav .nav-link.disabled {
@@ -4989,10 +4988,9 @@ a.badge-dark.focus, a.badge-dark:focus {
 }
 
 .jumbotron {
-    padding: 2rem 1rem;
+    padding: 4rem 1rem;
     background-image: url("/storage/homepage-img.jpg");
-    background-size: cover;
-    background-position: center
+    background-size: cover
 }
 .jumbotron-heading {
     font-weight: 300;
@@ -10159,15 +10157,14 @@ footer.page-footer .footer-copyright {
 
 nav.navbar.shrink {
     background-color: #135ca3;
-    transition: all 0.8s ease;
+    transition: all 0.6s ease;
     font-size: 17px;
-    padding-top: 6px;
-    padding-bottom: 6px;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
-.py-n5 {
-    margin-top: -4rem !important
+.shrink2 {
+    width: 80%;
 }
-
 @media (max-width: 991.98px){
 
     .navbar-nav {

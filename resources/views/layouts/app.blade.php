@@ -15,10 +15,15 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script>
     $(window).scroll(function() {
-        if ($(document).scrollTop() > 50) {
+        if ($(document).scrollTop() > 0) {
             $('nav').addClass('shrink');
         } else {
             $('nav').removeClass('shrink');
+        }
+        if ($(document).scrollTop() > 0) {
+            $('a.navbar-brand > img').addClass('shrink2');
+        } else {
+            $('a.navbar-brand > img').removeClass('shrink2');
         }
     });
 </script>
@@ -35,8 +40,8 @@
     <div id="app">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                <a class="navbar-brand" href="/">
+                <img src="storage/logo-md1.png" alt="logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
