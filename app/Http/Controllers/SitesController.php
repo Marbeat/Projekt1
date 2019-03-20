@@ -7,19 +7,19 @@ use Illuminate\Http\Request;
 
 class SitesController extends Controller
 {
-public function  menu1()
+public function  oferta()
 {
 
-    return view('sites.menu1');
+    return view('sites.oferta');
 }
 
-public function  menu2()
+public function  formularz()
 {
-    return view('sites.menu2');
+    return view('sites.formularz');
 }
 
-public function  menu3()
+public function  kontakt()
 {
-    return view('sites.menu3');
+    return view('sites.kontakt');
 }
 }

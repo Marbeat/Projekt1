@@ -20,15 +20,21 @@ return view('home');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-    Route::group(['middleware' => ['auth']], function () {
-    // Authorized routs for users
-    Route::get('/orders', 'OrdersController@index')->name('orders');
-    });
+
+Route::get('/orders', 'OrdersController@index')->name('orders');
+
 
 Route::get('/admin', 'AdminController@admin')
     ->middleware('is_admin')
     ->name('admin');
 
-Route::get('menu1','SitesController@menu1');
-Route::get('menu2','SitesController@menu2');
-Route::get('menu3','SitesController@menu3');
+Route::get('/oferta', 'SitesController@oferta')->name('oferta');
+Route::get('/formularz', 'SitesController@formularz')->name('formularz');
+Route::get('/kontakt', 'SitesController@kontakt')->name('kontakt');
+
+/*
+Route::group(['middleware' => ['auth']], function () {
+    // Authorized routs for users for each sites
+
+});
+*/

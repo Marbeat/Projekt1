@@ -1,12 +1,15 @@
-@extends('layouts.title', ['title' => 'Zamówienia'])
+@extends('layouts.title', ['title' => 'Formularz'])
 @extends('layouts.app')
 @extends('layouts.footer')
 @section('content')
-<div class="container">
-    <div class="content">
-    <div class="row justify-content-center">
-orders
+<section class="jumbotron text-center">
+    <div class="container">
+        <h2 class="jumbotron-heading text-uppercase text-white">Zaprojektuj stronę z <strong>My-design</strong></h2>
+        <p class="lead text-white">Oferujemy najniższe ceny na rynku, zapewniając satysfakcję jakości</br>Ustal warunki projektu w naszym formularzu, a my ułatwimy Tobie drogę do stworzenia własnego wyglądu w sieci!</p>
+        <p>
+            <a href="{{ route('formularz') }}" class="btn btn-primary my-2"><span class="glyphicon glyphicon-file"></span> Formularz projektu</a>
+            <a href="{{ route('kontakt') }}" class="btn btn-secondary my-2"><span class="glyphicon glyphicon-envelope"></span> Kontakt</a>
+        </p>
     </div>
-</div>
-</div>
-@endsection
+</section>
+    @endsection

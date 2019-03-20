@@ -1,4 +1,4 @@
-@extends('layouts.title', ['title' => 'Formularz'])
+@extends('layouts.title', ['title' => 'Kontakt'])
 @extends('layouts.app')
 @extends('layouts.footer')
 <section class="jumbotron text-center">
