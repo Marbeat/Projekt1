@@ -40,6 +40,20 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="phone_number" class="col-lg-4 col-form-label text-lg-right">{{ __('Phone number') }}</label>
+
+                            <div class="col-lg-6">
+                                <input id="phone_number" type="tel" class="form-control{{ $errors->has('phone_number') ? ' is-invalid' : '' }}" name="phone_number" value="{{ old('phone_number') }}" required>
+
+                                @if ($errors->has('phone_number'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('phone_number') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="password" class="col-lg-4 col-form-label text-lg-right">{{ __('Password') }}</label>
 
                             <div class="col-lg-6">

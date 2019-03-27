@@ -1,6 +1,7 @@
 @extends('layouts.title', ['title' => 'Weryfikacja'])
 @extends('layouts.app')
 @extends('layouts.footer')
+<section class="jumbotron-logreg">
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -22,4 +23,5 @@
         </div>
     </div>
 </div>
+</section>
 @endsection

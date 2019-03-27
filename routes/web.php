@@ -12,7 +12,7 @@
 */
 
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 Route::get('/', function () {
 return view('home');
@@ -21,7 +21,7 @@ return view('home');
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::get('/orders', 'OrdersController@index')->name('orders');
+Route::get('/orders', 'OrdersController@index')->name('orders') ->middleware('verified');
 
 
 Route::get('/admin', 'AdminController@admin')
@@ -29,9 +29,8 @@ Route::get('/admin', 'AdminController@admin')
     ->name('admin');
 
 Route::get('/oferta', 'SitesController@oferta')->name('oferta');
-Route::get('/formularz', 'SitesController@formularz')->name('formularz');
+Route::get('/formularz', 'SitesController@formularz')->name('formularz') ->middleware('verified');
 Route::get('/kontakt', 'SitesController@kontakt')->name('kontakt');
-
 /*
 Route::group(['middleware' => ['auth']], function () {
     // Authorized routs for users for each sites
