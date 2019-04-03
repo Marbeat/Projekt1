@@ -44,7 +44,6 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <a class="nav-link" href="{{ route('oferta') }}">{{ __('Oferta') }}</a>
-                        <a class="nav-link" href="{{ route('formularz') }}">{{ __('Formularz') }}</a>
                         <a class="nav-link" href="{{ route('kontakt') }}">{{ __('Kontakt') }}</a>
                         <!-- Authentication Links -->
                         @guest
@@ -65,8 +64,10 @@
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     @if(auth()->user()->isAdmin())
                                     <a class="dropdown-item" href="{{ route('admin') }}">{{ __('Panel admina') }}</a>
+                                    @else
+                                    <a class="dropdown-item" href="{{ route('panel') }}">{{ __('Panel klienta') }}</a>
+                                    <a class="dropdown-item" href="{{ route('formularz') }}">{{ __('Formularz') }}</a>
                                     @endif
-                                    <a class="dropdown-item" href="{{ route('orders') }}">{{ __('Zamówienia') }}</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

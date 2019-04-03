@@ -11,7 +11,12 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
-
+                        @if (Session::has('message-register'))
+                            <div class="alert alert-info">{{ Session::get('message-register') }}</div>
+                        @endif
+                        @if (Session::has('message-reset-password'))
+                            <div class="alert alert-info">{{ Session::get('message-reset-password') }}</div>
+                        @endif
                         <div class="form-group row">
                             <label for="email" class="col-lg-4 col-form-label text-lg-right">{{ __('E-Mail Address') }}</label>
 

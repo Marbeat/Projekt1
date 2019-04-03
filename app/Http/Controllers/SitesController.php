@@ -22,4 +22,8 @@ public function  kontakt()
 {
     return view('sites.kontakt');
 }
+public function panel()
+{
+    return view('sites.panel');
+}
 }
