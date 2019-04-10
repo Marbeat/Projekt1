@@ -35,6 +35,7 @@ Route::get('/kontakt', 'SitesController@kontakt')->name('kontakt');
 Route::group(['middleware' => ['auth']], function () {
     // Authorized routs for users for each sites
 Route::get('/panel', 'SitesController@panel')->name('panel');
+Route::resource('orders', 'OrdersController');
 
 });
 */
