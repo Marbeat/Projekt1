@@ -20,10 +20,6 @@ return view('home');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
-Route::get('/orders', 'OrdersController@index')->name('orders') ->middleware('verified');
-
-
 Route::get('/admin', 'AdminController@admin')
     ->middleware('is_admin')
     ->name('admin');
@@ -31,11 +27,11 @@ Route::get('/admin', 'AdminController@admin')
 Route::get('/oferta', 'SitesController@oferta')->name('oferta');
 Route::get('/formularz', 'SitesController@formularz')->name('formularz') ->middleware('verified');
 Route::get('/kontakt', 'SitesController@kontakt')->name('kontakt');
-/*
+
 Route::group(['middleware' => ['auth']], function () {
     // Authorized routs for users for each sites
 Route::get('/panel', 'SitesController@panel')->name('panel');
 Route::resource('orders', 'OrdersController');
 
 });
-*/
+

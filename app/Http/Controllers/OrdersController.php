@@ -5,12 +5,13 @@ namespace App\Http\Controllers;
 use App\Order;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreOrderRequest;
+use Illuminate\Support\Facades\DB;
 
 class OrdersController extends Controller
 {
     public function index ()
     {
-        $orders = Order::paginate(5);
+        $orders = DB::table('orders')->paginate(1);
         return view('orders.index', compact('orders'));
     }
     public function create ()
