@@ -13,3 +13,5 @@ yarn-error.log
 \.idea/
 
 config/mail\.php
+
+database/migrations/

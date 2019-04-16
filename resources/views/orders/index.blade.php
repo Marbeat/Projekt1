@@ -15,17 +15,16 @@
                             @if (session('message'))
                                 <div class="alert alert-info">{{ session('message') }}</div>
                             @endif
-                            <a href="{{ route('orders.create') }}" class="btn btn-info">Dodaj kolejne zamówienie</a>
+                            <a href="{{ route('orders.create') }}" class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span> Złóż zamówienie</a>
                             <table class="table table-bordered">
-                            <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Kryterium</th>
-                                <th scope="col">Decyzja</th>
-                            </tr>
-                            </thead>
                             <tbody>
                             @forelse($orders as $order)
+                                <tr>
+
+                                    <td colspan="3" class="text-center">Data złożenia zamówienia:
+                                    {{ $order->created_at }}</td>
+
+                                </tr>
                                 <tr>
                                     <th scope="row">1</th>
                                     <td>Indywidualny projekt graficzny</td>
@@ -68,8 +67,8 @@
                                 </tr>
                                 <tr>
                                     <th scope="row">9</th>
-                                    <td>Ilość wersji językowych</td>
-                                    <td>{{ $order->Ilosc_wersji_jezykowych }}</td>
+                                    <td>Ilość dodatkowych wersji językowych</td>
+                                    <td>{{ $order->Ilosc_dodatkowych_wersji_jezykowych }}</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">10</th>
@@ -81,19 +80,19 @@
 
                             @empty
                                 <tr>
-                                    <td colspan="3">No entries found.</td>
+                                    <td colspan="3">Aktualnie nie posiadasz żadnych zamówień.</td>
                                 </tr>
                             @endforelse
                             </tbody>
                         </table>
                             @foreach($orders as $order)
-                            <a href="{{ route('orders.edit', $order->id) }}" class="btn btn-default">Edytuj</a>
+                            <a href="{{ route('orders.edit', $order->id) }}" class="btn btn-default"><span class="	glyphicon glyphicon-edit"></span> Edytuj</a>
                             <form action="{{ route('orders.destroy', $order->id) }}" method="POST"
                                   style="display: inline"
                                   onsubmit="return confirm('Czy napewno chcesz usunąć to zamówienie?');">
                                 <input type="hidden" name="_method" value="DELETE">
                                 {{ csrf_field() }}
-                                <button class="btn btn-danger">Usuń zamówienie</button>
+                                <button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span> Usuń zamówienie</button>
                             </form>
                     {{ $orders->links() }}
                     @endforeach
