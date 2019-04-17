@@ -6,12 +6,13 @@ use App\Order;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreOrderRequest;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class OrdersController extends Controller
 {
     public function index ()
     {
-        $orders = DB::table('orders')->paginate(1);
+        $orders = DB::table('orders')->where('user_id', Auth::user()->id)->paginate(1);
         return view('orders.index', compact('orders'));
     }
     public function create ()
