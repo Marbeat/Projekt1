@@ -1,15 +1,13 @@
 @extends('layouts.title', ['title' => 'Oferta'])
 @extends('layouts.app')
 @extends('layouts.footer')
+@section('content')
+    <style>
+        body{ margin:0}
+    </style>
 <section class="jumbotron text-center">
     <div class="container">
-        <h2 class="jumbotron-heading text-uppercase text-white">Zaprojektuj stronę z <strong><font color="#e99a35">My-design</font></strong></h2>
-        <p class="lead text-white">Oferujemy najniższe ceny na rynku, zapewniając satysfakcję jakości</br>Ustal warunki projektu w naszym formularzu, a my ułatwimy Tobie drogę do stworzenia własnego wyglądu w sieci!</p>
-        <p>
-            <a href="{{ route('formularz') }}" class="btn btn-primary my-2"><span class="glyphicon glyphicon-file"></span> Formularz projektu</a>
-            <a href="{{ route('kontakt') }}" class="btn btn-secondary my-2"><span class="glyphicon glyphicon-envelope"></span> Kontakt</a>
-        </p>
+        <h2 class="jumbotron-heading text-uppercase text-white">Strona w budowie</h2>
     </div>
 </section>
-@section('content')
-    @endsection
+@endsection

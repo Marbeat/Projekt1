@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     protected $fillable = [
+        'user_id',
         'uzytkownik',
         'Adres_email',
         'Indywidualny_projekt_graficzny',
@@ -15,11 +16,10 @@ class Order extends Model
         'Galeria',
         'Formularz_kontaktowy',
         'Mapa_dojazdu',
-        'Ilosc_wersji_jezykowych',
+        'Ilosc_dodatkowych_wersji_jezykowych',
         'Responsywny_projekt_strony',
         'Animowane_elementy_strony',
         'Dodatkowe_informacje'
     ];
-
     protected $dates = ['deleted_at'];
 }

@@ -2,7 +2,7 @@
 @extends('layouts.app')
 @extends('layouts.footer')
 @section('content')
-    <section class="jumbotron-logreg">
+    <section class="bg-panel">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

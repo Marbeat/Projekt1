@@ -2,12 +2,15 @@
 @extends('layouts.app')
 @extends('layouts.footer')
 @section('content')
-<section class="jumbotron-logreg">
+    <style>
+        body{ margin:0}
+    </style>
+<section class="bg-panel">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+                <div class="card-header font-weight-bold blockquote text-center text-uppercase">{{ __('Login') }}</div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf

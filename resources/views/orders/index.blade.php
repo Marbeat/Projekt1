@@ -5,7 +5,7 @@
     <style>
         body{ margin:0}
     </style>
-    <section class="bg-orders">
+    <section class="bg-panel">
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -20,10 +20,8 @@
                             <tbody>
                             @forelse($orders as $order)
                                 <tr>
-
                                     <td colspan="3" class="text-center">Data złożenia zamówienia:
                                     {{ $order->created_at }}</td>
-
                                 </tr>
                                 <tr>
                                     <th scope="row">1</th>
@@ -104,13 +102,13 @@
 <style>
 
     th {
-        background: #4196bfb5;
+        background: #08315aa6;
         color: white;
-        font-weight: bold;
+        font-weight: bold
     }
     td, th {
         border: 1px solid #ccc;
-        text-align: left;
+        text-align: left
     }
 </style>
 @endsection

@@ -1,12 +1,16 @@
 @extends('layouts.title', ['title' => 'Rejestracja'])
 @extends('layouts.app')
 @extends('layouts.footer')
-<section class="jumbotron-logreg">
+@section('content')
+    <style>
+        body{ margin:0}
+    </style>
+<section class="bg-panel">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="card-header font-weight-bold blockquote text-center text-uppercase">{{ __('Register') }}</div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
@@ -92,5 +96,4 @@
     </div>
 </div>
 </section>
-@section('content')
 @endsection

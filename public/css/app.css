@@ -357,7 +357,6 @@ hr {
 }
 
 .blockquote {
-    margin-bottom: 1rem;
     font-size: 1.25rem
 }
 
@@ -1569,9 +1568,9 @@ pre code {
 }
 
 .table {
-    width: 100%;
-    margin-bottom: 1rem;
-    color: #212529
+    width:100%;
+    margin-bottom:22px;
+    margin-top:22px
 }
 
 .table td, .table th {
@@ -1594,11 +1593,7 @@ pre code {
 }
 
 .table-bordered {
-    border: 1px solid #dee2e6
-}
-
-.table-bordered td, .table-bordered th {
-    border: 1px solid #dee2e6
+    border: 1px solid #ddd;
 }
 
 .table-bordered thead td, .table-bordered thead th {
@@ -2503,14 +2498,14 @@ a.btn.disabled, fieldset:disabled a.btn {
 
 .btn-info {
     color: #fff;
-    background-color: #17a2b8;
-    border-color: #17a2b8
+    background-color: #2981b3;
+    border-color: #2981b3
 }
 
 .btn-info:hover {
     color: #fff;
-    background-color: #138496;
-    border-color: #117a8b
+    background-color: #2778a3;
+    border-color: #2778a3
 }
 
 .btn-info.focus, .btn-info:focus {
@@ -3011,7 +3006,6 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
     display: none;
     float: left;
     min-width: 10rem;
-    padding: .5rem 0;
     margin: .125rem 0 0;
     font-size: 1rem;
     color: #212529;
@@ -4738,6 +4732,7 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
     display: -ms-flexbox;
     display: flex;
     padding-left: 0;
+    margin:22px 0;
     list-style: none;
     border-radius: .25rem
 }
@@ -4986,12 +4981,7 @@ a.badge-dark.focus, a.badge-dark:focus {
 .jumbotron {
     padding: 6rem 1rem;
     background-image: url("../storage/homepage-img.jpg");
-    background-size: cover
-}
-.jumbotron-logreg {
-    padding: 8rem 2rem;
-    background: url("../storage/website-login-background.jpg")no-repeat center center;
-    min-height: 720px;
+    background-size: cover;
 }
 .jumbotron-heading {
     font-weight: 300;
@@ -5001,12 +4991,6 @@ a.badge-dark.focus, a.badge-dark:focus {
         padding: 11rem 2rem
     }
 }
-@media (min-width: 576px) {
-    .jumbotron-logreg {
-        padding: 8rem 2rem;
-    }
-}
-
 .jumbotron-fluid {
     padding-right: 0;
     padding-left: 0;
@@ -9961,7 +9945,7 @@ a.text-warning:focus, a.text-warning:hover {
 }
 
 .text-danger {
-    color: #dc3545 !important
+    color: #ffb658 !important
 }
 
 a.text-danger:focus, a.text-danger:hover {
@@ -10152,9 +10136,12 @@ footer.page-footer .footer-copyright {
 }
 .bg-homepage {
     background-image: url("../storage/1.png");
+}
+.bg-panel {
+    padding: 8rem 2rem;
+    background: url("../storage/website-login-background.jpg")no-repeat center center;
     background-size: cover;
-    background-position: center;
-
+    min-height: 100vh;
 }
 .vcenter {
     position: relative;
@@ -10186,4 +10173,80 @@ nav.navbar.shrink {
 }
 .margin-top-minus{
     margin-top: -3.7rem;
+}
+.panel {
+    margin-bottom: 22px;
+    background-color: #135ca33d;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.panel-body{
+    padding:15px
+}
+.panel-body:after,.panel-body:before{
+    content:" ";
+    display:table
+}
+.btn-default{
+    color:#636b6f;
+    background-color:#fff;
+    border-color:#ccc
+}
+.btn-default.focus,.btn-default:focus{
+    color:#636b6f;
+    background-color:#e6e5e5;
+    border-color:#8c8c8c
+}
+.btn-default.active,.btn-default:active,.btn-default:hover,.open>.btn-default.dropdown-toggle{
+    color:#636b6f;
+    background-color:#e6e5e5;
+    border-color:#adadad
+}
+.btn-default.active.focus,.btn-default.active:focus,.btn-default.active:hover,.btn-default:active.focus,.btn-default:active:focus,.btn-default:active:hover,.open>.btn-default.dropdown-toggle.focus,.open>.btn-default.dropdown-toggle:focus,.open>.btn-default.dropdown-toggle:hover{
+    color:#636b6f;
+    background-color:#d4d4d4;
+    border-color:#8c8c8c
+}
+.btn-default.disabled.focus,.btn-default.disabled:focus,.btn-default.disabled:hover,.btn-default[disabled].focus,.btn-default[disabled]:focus,.btn-default[disabled]:hover,fieldset[disabled] .btn-default.focus,fieldset[disabled] .btn-default:focus,fieldset[disabled] .btn-default:hover{
+    background-color:#fff;
+    border-color:#ccc
+}
+.btn-default .badge{
+    color:#fff;
+    background-color:#636b6f
+}
+.panel-default {
+    border-color: #247eaf
+}
+.panel-default>.panel-heading {
+    border-color: #247eaf
+}
+.panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+@media (min-width: 768px) {
+    .col-md-offset-2 {
+        margin-left: 16.66666667%;
+    }
+}
+label,
+textarea {
+    font-size: .8rem;
+    letter-spacing: 1px;
+}
+textarea {
+    padding: 10px;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
 }

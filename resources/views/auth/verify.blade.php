@@ -1,7 +1,10 @@
 @extends('layouts.title', ['title' => 'Weryfikacja'])
 @extends('layouts.app')
 @extends('layouts.footer')
-<section class="jumbotron-logreg">
+<style>
+    body{ margin:0}
+</style>
+<section class="bg-panel">
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

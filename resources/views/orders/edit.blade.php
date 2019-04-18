@@ -5,7 +5,7 @@
     <style>
         body{ margin:0}
     </style>
-    <section class="bg-orders">
+    <section class="bg-panel">
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">

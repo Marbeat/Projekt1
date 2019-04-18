@@ -1,10 +1,11 @@
+@extends('layouts.title', ['title' => 'Nowe zamówienie'])
 @extends('layouts.app')
 @extends('layouts.footer')
 @section('content')
     <style>
         body{ margin:0}
     </style>
-    <section class="bg-orders">
+    <section class="bg-panel">
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -23,6 +24,7 @@
                             {{ csrf_field() }}
                             <input type="hidden" name="uzytkownik" value="{{ Auth::user()->name }}">
                             <input type="hidden" type="email" name="Adres_email" value="{{ Auth::user()->email }}"/>
+                            <input type="hidden" name="user_id" value="{{ Auth::user()->id }}"/>
                             <p><b>Indywidualny projekt graficzny:</b></p>
                             <input type="radio" name="Indywidualny_projekt_graficzny" value="Tak" @if(old('Indywidualny_projekt_graficzny') == 'Tak') checked @endif>Tak
                             <input type="radio" name="Indywidualny_projekt_graficzny" value="Nie" @if(old('Indywidualny_projekt_graficzny') == 'Nie') checked @endif>Nie

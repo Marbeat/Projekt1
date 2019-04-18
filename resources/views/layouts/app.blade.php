@@ -66,7 +66,6 @@
                                     <a class="dropdown-item" href="{{ route('admin') }}">{{ __('Panel admina') }}</a>
                                     @else
                                     <a class="dropdown-item" href="{{ route('panel') }}">{{ __('Panel klienta') }}</a>
-                                    <a class="dropdown-item" href="{{ route('formularz') }}">{{ __('Formularz') }}</a>
                                     @endif
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
