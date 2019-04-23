@@ -12,7 +12,7 @@ class OrdersController extends Controller
 {
     public function index ()
     {
-        $orders = DB::table('orders')->where('user_id', Auth::user()->id)->paginate(1);
+        $orders = DB::table('orders')->where('user_id', Auth::user()->id)->orderBy('created_at', 'desc')->where('deleted_at',NULL)->paginate(1);
         return view('orders.index', compact('orders'));
     }
     public function create ()
