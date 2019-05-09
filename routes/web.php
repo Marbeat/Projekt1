@@ -22,6 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('admin', 'AdminController')->middleware('is_admin');
 
+Route::get('admin/orders', 'AdminController@show')->name('admin/orders');
 Route::get('/oferta', 'SitesController@oferta')->name('oferta');
 Route::get('/kontakt', 'SitesController@kontakt')->name('kontakt');
 

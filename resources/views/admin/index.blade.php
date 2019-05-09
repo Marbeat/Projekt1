@@ -1,13 +1,17 @@
-@extends('layouts.title', ['title' => 'Formularz'])
+@extends('layouts.title', ['title' => 'Panel użytkownika'])
 @extends('layouts.app')
 @extends('layouts.footer')
-<section class="jumbotron text-center">
-    <div class="container">
-        <h2 class="jumbotron-heading text-uppercase text-white">Zaprojektuj stronę z <strong>My-design</strong></h2>
-        <p class="lead text-white">Oferujemy najniższe ceny na rynku, zapewniając satysfakcję jakości</br>Ustal warunki projektu w naszym formularzu, a my ułatwimy Tobie drogę do stworzenia własnego wyglądu w sieci!</p>
-        <p>
-            <a href="{{ route('formularz') }}" class="btn btn-primary my-2"><span class="glyphicon glyphicon-file"></span> Formularz projektu</a>
-            <a href="{{ route('kontakt') }}" class="btn btn-secondary my-2"><span class="glyphicon glyphicon-envelope"></span> Kontakt</a>
-        </p>
-    </div>
-</section>
+@section('content')
+    <style>
+        body{ margin:0}
+    </style>
+    <section class="bg-panel text-center">
+        <div class="container">
+            <p class="lead text-white text-uppercase mb-5">Panel administratora</p>
+            <div class="row">
+                <div class="col-sm-12">
+                    <a class="text-white" href="{{ route('admin/orders') }}"><img src="storage/panel-img3.png" width="100px"><br/>Zamówienia klientów</a><br/><br/>
+                </div>
+            </div>
+    </section>
+@endsection
