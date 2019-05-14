@@ -68,12 +68,13 @@
                                     <td>Ilość dodatkowych wersji językowych</td>
                                     <td>{{ $order->Ilosc_dodatkowych_wersji_jezykowych }}</td>
                                 </tr>
+                                @if ($order->Dodatkowe_informacje != NULL)
                                 <tr>
                                     <th scope="row">10</th>
                                     <td>Dodatkowe informacje</td>
                                     <td class="text-break">{{ $order->Dodatkowe_informacje }}</td>
                                 </tr>
-
+                                @endif
 
 
                             @empty

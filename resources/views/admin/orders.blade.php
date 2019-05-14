@@ -72,16 +72,20 @@
                                         <td>Ilość dodatkowych wersji językowych</td>
                                         <td>{{ $order->Ilosc_dodatkowych_wersji_jezykowych }}</td>
                                     </tr>
+                                    @if ($order->Dodatkowe_informacje != NULL)
                                     <tr>
                                         <th scope="row">11</th>
                                         <td>Dodatkowe informacje</td>
                                         <td class="text-break">{{ $order->Dodatkowe_informacje }}</td>
                                     </tr>
+                                    @endif
+                                    @if ($order->deleted_at != NULL)
                                     <tr>
-                                        <th scope="row">12</th>
-                                        <td>Data usunięcia</td>
-                                        <td class="text-break">{{ $order->deleted_at }}</td>
+                                        <th scope="row" class="text-warning">12</th>
+                                        <td class="text-warning">Data usunięcia</td>
+                                        <td class="text-break text-warning">{{ $order->deleted_at }}</td>
                                     </tr>
+                                    @endif
                                 @empty
                                     <tr>
                                         <td colspan="3">Aktualnie nie ma zamówień.</td>
