@@ -85,13 +85,13 @@
                             </tbody>
                         </table>
                             @foreach($orders as $order)
-                            <a href="{{ route('orders.edit', $order->id) }}" class="btn btn-default"><span class="	glyphicon glyphicon-edit"></span> Edytuj</a>
+                            <a href="{{ route('orders.edit', $order->id) }}" class="btn btn-default m-1"><span class="glyphicon glyphicon-edit"></span> Edytuj</a>
                             <form action="{{ route('orders.destroy', $order->id) }}" method="POST"
                                   style="display: inline"
                                   onsubmit="return confirm('Czy napewno chcesz usunąć to zamówienie?');">
                                 <input type="hidden" name="_method" value="DELETE">
                                 {{ csrf_field() }}
-                                <button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span> Usuń zamówienie</button>
+                                <button class="btn btn-danger m-1"><span class="glyphicon glyphicon-remove"></span> Usuń zamówienie</button>
                             </form>
                     {{ $orders->links() }}
                     @endforeach

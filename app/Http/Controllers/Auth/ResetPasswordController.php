@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Auth;
 
 class ResetPasswordController extends Controller
 {
@@ -26,7 +27,6 @@ class ResetPasswordController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/login';
 
     /**
      * Create a new controller instance.
@@ -35,7 +35,7 @@ class ResetPasswordController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        // $this->middleware('guest');
     }
 
     protected function resetPassword($user, $password)
@@ -44,6 +44,16 @@ class ResetPasswordController extends Controller
             'password' => bcrypt($password),
             'remember_token' => Str::random(60),
         ])->save();
-        return redirect($this->redirectPath())->with('message-reset-password', 'Hasło zostało zmienone. Możesz teraz się zalogować.');
+    }
+
+    public function redirectTo ()
+    {
+        if (Auth::check()) {
+            session()->flash('message-reset-password', 'Hasło zostało zmienione.');
+            return ('profil');
+        } else {
+            session()->flash('message-reset-password', 'Hasło zostało zmienione. Można teraz się zalogować.');
+            return ('login');
+        }
     }
 }

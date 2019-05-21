@@ -27,7 +27,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
                 <a class="navbar-brand" href="/">
-                    <img src="{{URL::to('/')}}/storage/logo-md1.png" alt=""/>
+                    <img src="{{URL::to('/')}}/storage/logo-md1.png" alt="logo" width="75%"/>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -63,7 +63,7 @@
 
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     @if(auth()->user()->isAdmin())
-                                    <a class="dropdown-item" href="{{ route('admin') }}">{{ __('Panel admina') }}</a>
+                                    <a class="dropdown-item" href="{{ route('admin.index') }}">{{ __('Panel admina') }}</a>
                                     @else
                                     <a class="dropdown-item" href="{{ route('panel') }}">{{ __('Panel klienta') }}</a>
                                     @endif
