@@ -1,4 +1,11 @@
 {
+  "Your name": "Imię",
+  "Your email": "E-mail",
+  "Subject": "Temat",
+  "Your message": "Wiadomość",
+  "Contact us": "Skontaktuj się z nami",
+  "Send": "Wyślij",
+  "Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within a matter of hours to help you.": "Masz jakieś pytania? Skontaktuj się z nami bezpośrednio poprzez formularz kontaktowy. Postaramy się odpowiedzieć w jak najkrótszym czasie.",
   "Confirm Password": "Potwierdź hasło",
   "E-Mail Address": "Adres e-mail",
   "Phone number": "Numer telefonu",
